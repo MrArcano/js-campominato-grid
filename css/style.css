@@ -1,5 +1,5 @@
 :root{
-  --h-header: 160px
+  --h-header: 80px
 }
 
 body{
@@ -22,7 +22,7 @@ header{
 
 /* CONTAINER BOX */
 .container-csm{
-  width: 600px;
+  height: 90%;
   aspect-ratio: 1/1;
   
   display: flex;

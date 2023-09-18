@@ -2,7 +2,9 @@ const btnGen = document.getElementById("btn-gen");
 const containerBox = document.getElementById("container-box");
 const dimBox = document.getElementById("input-dim");
 
+addOptionSelect();
 init();
+
 
 btnGen.addEventListener("click",function(){
     // 1. resetContainer
@@ -13,6 +15,8 @@ btnGen.addEventListener("click",function(){
 });
 
 // ************** FUNCTION **************
+
+// crea elemento box
 function createBox(index,dimBox){
   const newBox = document.createElement("div");
   newBox.className = "box";
@@ -23,6 +27,7 @@ function createBox(index,dimBox){
   return newBox;
 }
 
+// core software
 function init(){
     // seleziono dimBox
     const countBox = dimBox.value ** 2;
@@ -42,4 +47,12 @@ function init(){
       // append del box, al containerBox
       containerBox.append(box);
     };
+}
+
+// Aggiungo option select
+
+function addOptionSelect(){
+  for(i=10; i>=2 ; i--){
+    dimBox.innerHTML += `<option value="${i}">${i}x${i}</option>`;
+  }
 }
