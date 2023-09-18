@@ -1,0 +1,36 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-wrapper{
+  background-color: #5988e7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container{
+  width: 750px;
+  aspect-ratio: 1/1;
+  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: calc(100% / 10);
+  aspect-ratio: 1/1;
+  background-color: #293b64;
+  border: 2px solid white;
+  color: white;
+
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}

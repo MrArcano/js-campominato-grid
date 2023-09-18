@@ -22,6 +22,9 @@ Aggiungere una select accanto al bottone di generazione, che fornisca una scelta
 ## Logica
 
 1. Al click del bottone, esegue un ciclo di n iterazioni, nel primo caso 100
+
 2. Ad ogni iterazione, creiamo un elemento che sarà il nostro quadrato e facciamo l'append al contenitore padre
+
 3. Quando creiamo l'elemento quadrato aggiungiamo un eventListner per il click
+
 4. all'evento click aggiungiamo o togliamo una classe css, che cambia il colore, e stampiamo il numero della cella, che abbiamo associato alla creazione del quadrato
