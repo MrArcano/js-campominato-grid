@@ -1,23 +1,30 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root{
+  --h-header: 160px
+}
+
+body{
+  background-color: #5988e7;
 }
 
 .main-wrapper{
-  background-color: #5988e7;
+  height: calc((100vh - var(--h-header)));
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
+
+header{
+  height: var(--h-header);
+  background-color: white;
+}
+
 /* BTN */
 .btn-csm{
   width: 750px;
   height: 50px;
   font-size: 32px;
-  margin-bottom: 32px;
 }
 
 /* CONTAINER BOX */
@@ -27,6 +34,9 @@
   
   display: flex;
   flex-wrap: wrap;
+
+  /* justify-content: center;
+  align-items: center; */
 }
 
 /* BOX */
