@@ -12,7 +12,15 @@
   align-items: center;
   height: 100vh;
 }
+/* BTN */
+.btn-csm{
+  width: 750px;
+  height: 50px;
+  font-size: 32px;
+  margin-bottom: 32px;
+}
 
+/* CONTAINER BOX */
 .container{
   width: 750px;
   aspect-ratio: 1/1;
@@ -21,6 +29,7 @@
   flex-wrap: wrap;
 }
 
+/* BOX */
 .box{
   width: calc(100% / 10);
   aspect-ratio: 1/1;
@@ -36,9 +45,8 @@
   cursor: pointer;
 }
 
-.btn-csm{
-  width: 750px;
-  height: 50px;
-  font-size: 32px;
-  margin-bottom: 32px;
+/* CLICKED */
+
+.box.clicked{
+  background-color: cadetblue;
 }
