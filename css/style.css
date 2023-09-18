@@ -20,28 +20,18 @@ header{
   background-color: white;
 }
 
-/* BTN */
-.btn-csm{
-  width: 750px;
-  height: 50px;
-  font-size: 32px;
-}
-
 /* CONTAINER BOX */
-.container{
-  width: 750px;
+.container-csm{
+  width: 600px;
   aspect-ratio: 1/1;
   
   display: flex;
   flex-wrap: wrap;
-
-  /* justify-content: center;
-  align-items: center; */
 }
 
 /* BOX */
 .box{
-  width: calc(100% / 10);
+  /* width: calc(100% / 10); */
   aspect-ratio: 1/1;
   background-color: #293b64;
   border: 2px solid white;
