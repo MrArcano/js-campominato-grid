@@ -12,6 +12,8 @@ btnGen.addEventListener("click",function(){
 
     // per ogni box aggiungo un eventListner CLICK
     box.addEventListener("click", function(){
+      console.dir(this);
+      console.log(this._boxID);
       // aggiungo o rimuovo la classe clicked per il cambio del bg
       this.classList.toggle("clicked");
     })
@@ -26,6 +28,7 @@ btnGen.addEventListener("click",function(){
 function createBox(index){
   const newBox = document.createElement("div");
   newBox.className = "box";
-  newBox.innerHTML = `<span>${index}</span>`;
+  newBox.innerHTML = index;
+  newBox._boxID = index;
   return newBox;
 }
