@@ -27,6 +27,8 @@ header{
   
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 /* BOX */
@@ -42,11 +44,11 @@ header{
   justify-content: center;
   align-items: center;
 
-  cursor: pointer;
+  cursor: crosshair;
 }
 
 /* CLICKED */
 
 .box.clicked{
-  background-color: #85a8ef;
+  background-color: #296461;
 }

@@ -3,31 +3,17 @@ const containerBox = document.getElementById("container-box");
 const dimBox = document.getElementById("input-dim");
 
 addOptionSelect();
-init();
-
 
 btnGen.addEventListener("click",function(){
-    // 1. resetContainer
-  containerBox.innerHTML="";
-
+  reset();
   init();
-
 });
 
+// **************************************
 // ************** FUNCTION **************
+// **************************************
 
-// crea elemento box
-function createBox(index,dimBox){
-  const newBox = document.createElement("div");
-  newBox.className = "box";
-  // newBox.style.width = `calc(100% / ${dimBox})`;
-  newBox.style.width = 100 / dimBox + "%";
-  // newBox.innerHTML = index;
-  newBox._boxID = index;
-  return newBox;
-}
-
-// core software
+// FUNCTION CORE APP
 function init(){
     // seleziono dimBox
     const countBox = dimBox.value ** 2;
@@ -35,24 +21,38 @@ function init(){
     for(let i=1; i<=countBox; i++){
       // richiamo la creazione di un box
       const box = createBox(i,dimBox.value);
-  
-      // per ogni box aggiungo un eventListner CLICK
-      box.addEventListener("click", function(){
-        console.dir(this);
-        console.log(this._boxID);
-        // aggiungo o rimuovo la classe clicked per il cambio del bg
-        this.classList.toggle("clicked");
-      })
-      
+
       // append del box, al containerBox
       containerBox.append(box);
     };
+};
+
+// FUNCTION CREA BOX
+function createBox(index,dimBox){
+  const newBox = document.createElement("div");
+  newBox.className = "box";
+  newBox.style.width = 100 / dimBox + "%";
+  newBox._boxID = index;
+  newBox.addEventListener("click",handlerBox);
+  return newBox;
+};
+
+// FUNCTION HANDLERBOX
+function handlerBox(){
+  // console.dir(this);
+  console.log(this._boxID);
+  // aggiungo o rimuovo la classe clicked per il cambio del bg
+  this.classList.toggle("clicked");
 }
 
-// Aggiungo option select
-
+// FUNCTION ADD OPTION SELECT
 function addOptionSelect(){
   for(i=10; i>=2 ; i--){
     dimBox.innerHTML += `<option value="${i}">${i}x${i}</option>`;
   }
-}
+};
+
+// FUNCTION RESET
+function reset(){
+  containerBox.innerHTML="";
+};
